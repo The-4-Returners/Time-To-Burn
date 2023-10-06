@@ -41,26 +41,17 @@ const TimeToBurnAPI = () => {
 	
 	textEntryValid()
 
-	if(submitted === true) {
-		return (
-			<>
-				<div><TextInput value={textInput} onChangeText={ setTextInput } onKeyPress={handleKeyPress} /> </div>
-				<div><button disabled={buttonDisabled} onClick={submit}>Calculate</button> </div>
-				
-				<FetchAndDisplayResults key={countSubmit} text={textInput} />
-			</>
-		)
-
-		//uses scan so findtext can find each field
-	}else {
-		return (
+	
+	return (
 		<>
 			<div><TextInput value={textInput} onChangeText={ setTextInput } onKeyPress={handleKeyPress} /> </div>
 			<div><button disabled={buttonDisabled} onClick={submit}>Calculate</button> </div>
+			{
+				submitted === true ? <FetchAndDisplayResults key={countSubmit} text={textInput} /> : ""  
+			}	
 		</>
-		)
-	}
-	
+	)
+
 }
 
 export default TimeToBurnAPI
