@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 
 import URL from "../util/url"
 
-import {DisplayResults} from "./display_results";
+import {FetchAndDisplayResults} from "./fetch_and_display_results"; 
 
 const PARAM_TEXT = "2 apples 400g chicken"
 
@@ -113,14 +113,14 @@ describe("<DisplayResults>",  () => {
   */
 
     test("Is showing food ?",  async () => {
-      render(<DisplayResults text={PARAM_TEXT}/>);
+      render(<FetchAndDisplayResults text={PARAM_TEXT}/>);
 
       expect( await screen.findByText("apples")).toBeInTheDocument() 
       expect( await screen.findByText("chicken")).toBeInTheDocument() 
   });
 
   test("Is showing exercise details?",  async () => {
-    render(<DisplayResults text={PARAM_TEXT}/>);
+    render(<FetchAndDisplayResults text={PARAM_TEXT}/>);
 
     //expect( await screen.findByText("Exercise Details:")).toBeInTheDocument() 
     expect( await screen.findByText("Running")).toBeInTheDocument() 
@@ -140,7 +140,7 @@ describe("<DisplayResults>",  () => {
       }),
     )
 
-    render(<DisplayResults text={PARAM_TEXT}/>);
+    render(<FetchAndDisplayResults text={PARAM_TEXT}/>);
 
     expect( await screen.findByText("Error:") ).toBeInTheDocument()  
     // ...
@@ -159,7 +159,7 @@ describe("<DisplayResults>",  () => {
       }),
     )
 
-    render(<DisplayResults text={WRONG_PARAM_TEXT}/>);
+    render(<FetchAndDisplayResults text={WRONG_PARAM_TEXT}/>);
 
     expect( await screen.findByText("Error:") ).toBeInTheDocument()  
     // ...

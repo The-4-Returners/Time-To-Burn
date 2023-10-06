@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-import {DisplayResults} from './display_results'
+import {FetchAndDisplayResults} from './fetch_and_display_results'
 import {TextInput} from './text_input'
  
 const TimeToBurnAPI = () => {
@@ -47,7 +47,7 @@ const TimeToBurnAPI = () => {
 				<div><TextInput value={textInput} onChangeText={ setTextInput } onKeyPress={handleKeyPress} /> </div>
 				<div><button disabled={buttonDisabled} onClick={submit}>Calculate</button> </div>
 				
-				<DisplayResults key={countSubmit} text={textInput} />
+				<FetchAndDisplayResults key={countSubmit} text={textInput} />
 			</>
 		)
 
