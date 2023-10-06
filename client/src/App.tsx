@@ -19,7 +19,7 @@ function App() {
 			</h1>
 		</header>
 	  
-		<div>
+		<div>     
 			<InputAndCalculate /> 
 		</div>
 	  
