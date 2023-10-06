@@ -3,7 +3,7 @@ import {useState} from "react"
 import {FetchAndDisplayResults} from './fetch_and_display_results'
 import {TextInput} from './text_input'
  
-const TimeToBurnAPI = () => {
+const InputAndCalculate = () => {
 	
 	//const [json, setJson] = useState<any | null >(null)
 	
@@ -44,6 +44,8 @@ const TimeToBurnAPI = () => {
 	
 	return (
 		<>
+			Learn how much exercise is needed to burn those calories<br/>
+			Usage:100g carrots  2 apples
 			<div><TextInput value={textInput} onChangeText={ setTextInput } onKeyPress={handleKeyPress} /> </div>
 			<div><button disabled={buttonDisabled} onClick={submit}>Calculate</button> </div>
 			{
@@ -54,5 +56,5 @@ const TimeToBurnAPI = () => {
 
 }
 
-export default TimeToBurnAPI
+export default InputAndCalculate
 

@@ -4,7 +4,7 @@
 //import {useEffect} from "react"
 
 
-import TimeToBurnAPI from "./components/get_data"
+import InputAndCalculate from "./components/input_and_calculate"
 
 
 import './App.css';
@@ -17,12 +17,10 @@ function App() {
 			<h1><img src="pngegg.png" width={40} height={40} alt="Stop watch"/>Time To Burn
 				<img src="pngegg.png" width={40} height={40} alt="Stop watch"/>
 			</h1>
-			Learn how much exercise is needed to burn those calories<br/>
-			Usage:100g carrots  2 apples
 		</header>
 	  
 		<div>
-			<TimeToBurnAPI /> 
+			<InputAndCalculate /> 
 		</div>
 	  
 		<footer>

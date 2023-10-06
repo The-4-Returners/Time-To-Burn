@@ -2,20 +2,20 @@ import { render, screen } from "@testing-library/react";
 
 import "@testing-library/jest-dom";
 
-import TimeToBurnAPI from "./get_data";
+import InputAndCalculate from "./input_and_calculate";
 
 
-describe("<TimeToBurnAPI>",  () => {
+describe("<InputAndCalculate>",  () => {
 	
   test("Is button  ?",  () => {
-     render(<TimeToBurnAPI />);
+     render(<InputAndCalculate />);
 
      expect( screen.getByText("Calculate")).toBeInTheDocument()
   });
   
 
   test("Is submit button disabled at start ?",  () => {
-    render(<TimeToBurnAPI />);
+    render(<InputAndCalculate />);
 
     expect( screen.getByRole("button")).toHaveAttribute('disabled')
  });
