@@ -7,13 +7,13 @@ import {DisplayExercises} from "./display_exercises"
 import URL from '../util/url'
 
    
-type DisplayResultsProps ={
+type FetchAndDisplayResultsProps ={
 	text:string
 }
 
 // this gets created twice in reacts dev mode strict mode, build mode is not affected ?
 //https://www.reddit.com/r/reactjs/comments/ugzopd/why_is_my_fetch_getting_called_twice/
-export const FetchAndDisplayResults : React.FC<DisplayResultsProps> =({text}) => {
+export const FetchAndDisplayResults : React.FC<FetchAndDisplayResultsProps> =({text}) => {
 
 	const [json,setJson] = useState<any>(null)
 	const [errorMessage, setErrorMessage] = useState("")
